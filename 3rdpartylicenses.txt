@@ -591,9 +591,6 @@ MIT
 @angular/router
 MIT
 
-angular-particle
-MIT
-
 @angular/fire/storage
 MIT
 
@@ -603,6 +600,9 @@ firebase/storage
 MIT
 
 firebase/auth
+
+angular-particle
+MIT
 
 @firebase/messaging
 Apache-2.0

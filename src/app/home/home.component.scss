@@ -74,7 +74,7 @@ canvas {
 // }
 
 // Variables
-$lato: 'Arvo';
+$lato: 'Montserrat';
 
 // // Title
 // h1 {
@@ -144,7 +144,7 @@ header {
   margin: 10px;
   align-self: flex-start;
   margin: 5px 0;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 .main h2 {
@@ -154,6 +154,13 @@ header {
   font-weight: 1000;
   line-height: 1.6;
 
+}
+
+#cynergy {
+  font-family: 'Devil Breeze Medium' !important;
+  font-size: 1.5em;
+  margin: 0;
+  padding: 0;
 }
 
 #inaug-date {

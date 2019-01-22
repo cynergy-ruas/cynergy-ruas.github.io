@@ -212,6 +212,20 @@ header {
   margin-top: 20px;
 }
 
+.social-media {
+  z-index: 999;
+  img {
+    max-height: 15px;
+  }
+}
+
+.social-media-link {
+  z-index: 999;
+  color: #ffffff;
+  text-align: center;
+  font-size: 0.9em;
+}
+
 .tag-line {
   display: none;
   flex: 5;
@@ -465,6 +479,20 @@ header {
 
   .bottom-content .bottom-logo {
     max-height: 30px;
+  }
+
+  .social-media {
+    z-index: 999;
+    img {
+      max-height: 13px;
+    }
+  }
+  
+  .social-media-link {
+    z-index: 999;
+    color: #ffffff;
+    text-align: center;
+    font-size: 0.7em;
   }
 
   .countdown {

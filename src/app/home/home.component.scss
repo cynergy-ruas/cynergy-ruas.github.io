@@ -144,7 +144,9 @@ header {
   margin: 10px;
   align-self: flex-start;
   margin: 5px 0;
+  margin-top: 0 !important;
   letter-spacing: 0px;
+  line-height: 1.2;
 }
 
 .main h2 {
@@ -153,7 +155,6 @@ header {
   font-size: 0.8em;
   font-weight: 1000;
   line-height: 1.6;
-
 }
 
 .cynergy-text {
@@ -161,10 +162,13 @@ header {
   font-size: 45px !important;
   margin: 0;
   padding: 0;
+  margin-top: 20px;
+  // line-height: 0.6;
 }
 
 .nergy-text {
   color: rgb(157, 29, 89);
+
 }
 
 
@@ -403,8 +407,8 @@ header {
   animation-duration: 1s;
   //Basic styling  
   display: inline-block;
-  width: 8px;
-  height: 40px;
+  width: 4px;
+  height: 20px;
   margin-left: 3px;
   // border-radius: 3px;
   box-shadow: 0 0 10px rgba(white, .3);
@@ -515,6 +519,7 @@ header {
     padding-left: 50px;
     h1 {
       font-size: 2.8em;
+      line-height: 0.9;
     }
     h2 {
       font-size: 1.2em;

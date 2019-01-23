@@ -19,17 +19,23 @@ import { RouterModule, Routes} from '@angular/router';
 // Other Pages to be used in the Router
 import { EventsComponent } from './events/events.component';
 import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { CountdownComponent } from './countdown/countdown.component';
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'events', component: EventsComponent }
+  { path: '', component: CountdownComponent },
+  { path: 'events', component: EventsComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'home', component: HomeComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     EventsComponent,
-    HomeComponent
+    HomeComponent,
+    AboutComponent,
+    CountdownComponent
   ],
   imports: [
     BrowserModule,

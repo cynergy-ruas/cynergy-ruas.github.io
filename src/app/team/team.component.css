@@ -1,9 +1,0 @@
-.images {
-    display: flex;
-    flex-direction: row;
-}
-
-.photo {
-    flex: 1;
-    width: 100%;
-}

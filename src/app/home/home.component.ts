@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   myParams: object = {};
   width = 100;
-  height = 100;
+  height = 50;
 
 
   constructor() { }

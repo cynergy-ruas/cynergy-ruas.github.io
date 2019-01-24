@@ -50,7 +50,7 @@ const appRoutes: Routes = [
     AngularFireAuthModule , // import for the authentication feature
     RouterModule.forRoot(
       appRoutes
-    ), MDBBootstrapModule
+    ), MDBBootstrapModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -41,6 +41,7 @@
     "rxjs": "^6.0.0",
     "tslib": "^1.9.0",
     "typescript": "~3.2.2",
+    "waypoint": "^0.2.8",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {

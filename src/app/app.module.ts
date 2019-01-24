@@ -23,6 +23,7 @@ import { AboutComponent } from './about/about.component';
 import { CountdownComponent } from './countdown/countdown.component';
 import { TeamComponent } from './team/team.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { NavbarComponent } from './navbar/navbar.component';
 
 const appRoutes: Routes = [
   { path: '', component: CountdownComponent },
@@ -39,7 +40,8 @@ const appRoutes: Routes = [
     HomeComponent,
     AboutComponent,
     CountdownComponent,
-    TeamComponent
+    TeamComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

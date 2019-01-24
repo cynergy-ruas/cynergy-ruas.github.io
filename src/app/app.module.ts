@@ -21,12 +21,15 @@ import { EventsComponent } from './events/events.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { CountdownComponent } from './countdown/countdown.component';
+import { TeamComponent } from './team/team.component';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 const appRoutes: Routes = [
   { path: '', component: CountdownComponent },
   { path: 'events', component: EventsComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'home', component: HomeComponent }
+  { path: 'home', component: HomeComponent },
+  { path: 'team', component: TeamComponent }
 ];
 
 @NgModule({
@@ -35,7 +38,8 @@ const appRoutes: Routes = [
     EventsComponent,
     HomeComponent,
     AboutComponent,
-    CountdownComponent
+    CountdownComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +50,7 @@ const appRoutes: Routes = [
     AngularFireAuthModule , // import for the authentication feature
     RouterModule.forRoot(
       appRoutes
-    )
+    ), MDBBootstrapModule
   ],
   providers: [],
   bootstrap: [AppComponent]

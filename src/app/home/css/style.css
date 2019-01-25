@@ -10,7 +10,7 @@
   position: fixed;
   width: 100vw;
   height: 100vh;
-  z-index: 2;
+  z-index: 0;
   margin: 0;
   padding: 0;
   background-position: 50% 50%;
@@ -240,6 +240,10 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 
+#fh5co-about {
+  z-index: 999;
+}
+
 #fh5co-content,
 #fh5co-consult {
   display: -webkit-box;
@@ -271,10 +275,12 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .fh5co-social-icons {
+  z-index: 5;
   margin: 0;
   padding: 0;
 }
 .fh5co-social-icons li {
+  z-index: 5;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -284,6 +290,7 @@ h1, h2, h3, h4, h5, h6, figure {
   *display: inline;
 }
 .fh5co-social-icons li a {
+  z-index: 5;
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
@@ -293,6 +300,7 @@ h1, h2, h3, h4, h5, h6, figure {
   padding-right: 10px;
 }
 .fh5co-social-icons li a i {
+  z-index: 5;
   font-size: 20px;
 }
 
@@ -517,6 +525,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .fh5co-staff {
+  z-index: 999;
   text-align: center;
   margin-bottom: 30px;
 }

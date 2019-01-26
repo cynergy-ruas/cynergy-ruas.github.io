@@ -26,10 +26,10 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { NavbarComponent } from './navbar/navbar.component';
 
 const appRoutes: Routes = [
-  { path: '', component: CountdownComponent },
+  { path: '', component: HomeComponent },
   { path: 'events', component: EventsComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'home', component: HomeComponent },
+  { path: 'countdown', component: CountdownComponent },
   { path: 'team', component: TeamComponent }
 ];
 

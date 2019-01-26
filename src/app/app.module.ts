@@ -16,15 +16,19 @@ import { environment } from '../environments/environment';
 // Router
 import { RouterModule, Routes} from '@angular/router';
 
-// Other Pages to be used in the Router
-import { EventsComponent } from './events/events.component';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { CountdownComponent } from './countdown/countdown.component';
-import { TeamComponent } from './team/team.component';
+// Bootstrap
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-import { NavbarComponent } from './navbar/navbar.component';
 
+// Other Pages to be used in the Router
+import { EventsComponent } from './components/events/events.component';
+import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
+import { CountdownComponent } from './components/countdown/countdown.component';
+import { TeamComponent } from './components/team/team.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+
+
+// App Routes
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'events', component: EventsComponent },

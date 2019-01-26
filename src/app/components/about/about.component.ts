@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import particle_config from '../particles_config';
+import particle_config from '../config-files/particles_config';
 
 
 @Component({

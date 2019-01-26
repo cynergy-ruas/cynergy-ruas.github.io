@@ -1,7 +1,8 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 // stuff for the Particle.JS
-import particle_config from '../particles_config';
+import particle_config from '../config-files/particles_config';
+
 declare var TweenMax: any;
 declare var Quart: any;
 declare var waypoints: any;

@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 // stuff for the Particle.JS
-import particle_config from '../particles_config';
+import particle_config from '../config-files/particles_config';
 declare var TweenMax: any;
 declare var Quart: any;
 declare var $: any;
@@ -71,13 +71,6 @@ export class CountdownComponent implements OnInit, AfterViewInit {
           minutes: this.$el.find('.bloc-time.min .figure'),
           seconds: this.$el.find('.bloc-time.sec .figure')
         };
-
-        // Init countdown values
-        // this.values = {
-        //   hours: this.$.hours.parent().attr('data-init-value'),
-        //   minutes: this.$.minutes.parent().attr('data-init-value'),
-        //   seconds: this.$.seconds.parent().attr('data-init-value'),
-        // };
 
         this.values = {
           days: days_diff,

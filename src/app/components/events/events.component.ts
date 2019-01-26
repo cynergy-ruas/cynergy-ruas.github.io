@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 // Events Service
-import { EventsService } from '../services/events.service';
+import { EventsService } from '../../services/events.service';
 
 // Models
-import { EventDetails } from '../models/event-details.model';
-import { Event } from '../models/event.model';
+import { EventDetails } from '../../models/event-details.model';
+import { Event } from '../../models/event.model';
 
 import * as firebase from 'firebase';
 

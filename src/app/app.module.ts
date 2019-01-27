@@ -15,6 +15,8 @@ import { environment } from '../environments/environment';
 
 // Router
 import { RouterModule, Routes} from '@angular/router';
+// App Router Module
+import { AppRoutingModule } from './app-routing.module';
 
 // Bootstrap
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
@@ -26,16 +28,6 @@ import { AboutComponent } from './components/about/about.component';
 import { CountdownComponent } from './components/countdown/countdown.component';
 import { TeamComponent } from './components/team/team.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-
-
-// App Routes
-const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'events', component: EventsComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'countdown', component: CountdownComponent },
-  { path: 'team', component: TeamComponent }
-];
 
 @NgModule({
   declarations: [
@@ -54,9 +46,8 @@ const appRoutes: Routes = [
     AngularFireStorageModule, // import for the storage features
     AngularFirestoreModule, // import for the database features
     AngularFireAuthModule , // import for the authentication feature
-    RouterModule.forRoot(
-      appRoutes
-    ), MDBBootstrapModule.forRoot()
+    AppRoutingModule, // Routing Module
+    MDBBootstrapModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

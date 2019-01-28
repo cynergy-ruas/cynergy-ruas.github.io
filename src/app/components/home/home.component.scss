@@ -1,116 +1,17 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-html,
-body {
+.view {
+  background: url("../../../assets/backgrounds/background-cynergy.jpg") no-repeat center center;
+  background-size: cover;
   height: 100vh;
-  width: 100vw;
-  overflow-x: hidden;
-
-  // background: rgb(222, 63, 15);
-  // background: -moz-linear-gradient(45deg, rgba(222, 63, 15, 0.99) 0%, rgba(58, 29, 100, 0.92) 42%, rgba(157, 29, 89, 1) 100%);
-  // background: -webkit-linear-gradient(45deg, rgba(222, 63, 15, 0.99) 0%, rgba(58, 29, 100, 0.92) 42%, rgba(157, 29, 89, 1) 100%);
-  // background: linear-gradient(45deg, rgba(222, 63, 15, 0.99) 0%, rgba(58, 29, 100, 0.92) 42%, rgba(157, 29, 89, 1) 100%);
-  // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#de3f0f", endColorstr="#9d1d59", GradientType=1);
-  // background: rgb(131, 58, 180);
-  // background: -moz-linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 0.9) 50%, rgba(252, 176, 69, 1) 100%);
-  // background: -webkit-linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 0.9) 50%, rgba(252, 176, 69, 1) 100%);
-  // background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 0.9) 50%, rgba(252, 176, 69, 1) 100%);
-  // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#833ab4", endColorstr="#fcb045", GradientType=1);
-
-  // background: rgb(222, 63, 15);
-  // background: -moz-linear-gradient(45deg, rgba(222, 63, 15, 0.9) 0%, rgba(157, 29, 89, 0.9) 48%, rgba(58, 29, 100, 0.9) 100%);
-  // background: -webkit-linear-gradient(45deg, rgba(222, 63, 15, 0.9) 0%, rgba(157, 29, 89, 0.9) 48%, rgba(58, 29, 100, 0.9) 100%);
-  // background: linear-gradient(45deg, rgba(222, 63, 15, 0.9) 0%, rgba(157, 29, 89, 0.9) 48%, rgba(58, 29, 100, 0.9) 100%);
-  // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#de3f0f", endColorstr="#3a1d64", GradientType=1);
-
-  background: #43C6AC;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #191654, #43C6AC);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #191654, #43C6AC);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-#particles {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1;
-  margin: 0;
-  padding: 0;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
+.rgba-gradient {
+background-image: linear-gradient(-225deg, rgba(35, 225, 254, 0.5) 0%, rgba(29, 143, 225, 0.5) 48%, rgba(98, 94, 177, 0.5) 100%);
 }
 
-canvas {
-  margin: 0;
-  padding: 0;
+.title-color {
+  color: rgb(222, 63, 15);
 }
 
-$color: #fd7000;
-$size: 12px;
-$time: 1;
-
-#preloader {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  z-index: 999;
-  justify-content: center;
-  align-items: center;
-  background:  #090707;
-}
-
-.dank-ass-loader {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  .row {
-    display: flex;
-  }
-}
-
-.arrow {
-  width: 0;
-  height: 0;
-  margin: 0 (-$size / 2);
-  border-left: $size solid transparent;
-  border-right: $size solid transparent;
-  border-bottom: ($size * 1.8) solid $color;
-  animation: blink $time + s infinite;
-  filter: drop-shadow(0 0 ($size * 1.5) $color);
-
-  &.down {
-    transform: rotate(180deg);
-  }
-
-  @for $i from 1 through 18 {
-    &.outer-#{$i} {
-      animation-delay: -($time / 18) * $i + s;
-    }
-  }
-
-  @for $i from 1 through 6 {
-    &.inner-#{$i} {
-      animation-delay: -($time / 6) * $i + s;
-    }
-  }
-}
-
-@keyframes blink {
-  0% {
-    opacity: 0.1;
-  }
-
-  30% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0.1;
-  }
+.subtitle-color {
+  color: #FDC830;
 }

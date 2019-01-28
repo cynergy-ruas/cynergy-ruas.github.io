@@ -1,26 +1,36 @@
-<html lang="en" class="full-height">
+<mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark elegant-color-dark ie-nav scrolling-navbar" [containerInside]="true">
 
-      <!--Main Navigation-->
-      <header>
-        <nav class="navbar  navbar-expand-md navbar-dark bg-dark">
-          <a class="navbar-brand" href="#"><img src="./assets/logos/cynergy-logo.png" width="35%"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav">
-                  <li class="nav-item">
-                      <a class="nav-link" [routerLink]="['/']">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link"  [routerLink]="['/about']">ABOUT</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link"  [routerLink]="['/events']">EVENTS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link"  [routerLink]="['/team']">TEAM</a>
-                      </li>
-              </ul>
-            </div>
-          </nav>
+  <!-- Side Brand Logo -->
+  <mdb-navbar-brand>
+      <a class="logo navbar-brand" href="#">
+        <img src="./assets/logos/cynergy-logo.png" height="30" alt="Cynergy | Coding Club Logo">
+      </a>
+  </mdb-navbar-brand>
+
+  <links>
+
+    <!-- Navigation Links -->
+      <ul class="navbar-nav mr-auto">
+          <a class="nav-item nav-link waves-light" href="" [routerLink]="['/']" routerLinkActive="active" mdbWavesEffect>Home<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link waves-light disabled" href="" [routerLink]="['/about']" mdbWavesEffect>About</a>
+          <a class="nav-item nav-link waves-light disabled" href="" [routerLink]="['/events']" mdbWavesEffect>Events</a>
+          <a class="nav-item nav-link waves-light" href="" [routerLink]="['/team']" routerLinkActive="active">Team</a>
+      </ul>
+      
+    <!-- Social Media Icons -->
+      <ul class="navbar-nav nav-flex-icons">
+          <li class="nav-item waves-light" mdbWavesEffect>
+              <a class="nav-link" href="https://facebook.com/cynergy.ruas" ><i class="fab fa-facebook-f"></i></a>
+          </li>
+          <li class="nav-item waves-light" mdbWavesEffect>
+              <a class="nav-link" href="https://twitter.com/cynergy_ruas" ><i class="fab fa-twitter"></i></a>
+          </li>
+          <li class="nav-item waves-light" mdbWavesEffect>
+              <a class="nav-link" href="https://instagram.com/cynergy_ruas" ><i class="fab fa-instagram"></i></a>
+          </li>
+          <li class="nav-item waves-light" mdbWavesEffect >
+              <a class="nav-link" href="https://github.com/cynergy-ruas" ><i class="fab fa-github"></i></a>
+          </li>
+      </ul>
+  </links>
+</mdb-navbar>

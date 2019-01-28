@@ -13,8 +13,6 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 
-// Router
-import { RouterModule, Routes} from '@angular/router';
 // App Router Module
 import { AppRoutingModule } from './app-routing.module';
 
@@ -28,6 +26,7 @@ import { AboutComponent } from './components/about/about.component';
 import { CountdownComponent } from './components/countdown/countdown.component';
 import { TeamComponent } from './components/team/team.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +36,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     AboutComponent,
     CountdownComponent,
     TeamComponent,
-    NavbarComponent
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

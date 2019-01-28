@@ -25,6 +25,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { CountdownComponent } from './components/countdown/countdown.component';
 import { TeamComponent } from './components/team/team.component';
+import { HallOfFameComponent } from './components/hall-of-fame/hall-of-fame.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 
@@ -36,6 +37,7 @@ import { FooterComponent } from './components/footer/footer.component';
     AboutComponent,
     CountdownComponent,
     TeamComponent,
+    HallOfFameComponent,
     NavbarComponent,
     FooterComponent
   ],

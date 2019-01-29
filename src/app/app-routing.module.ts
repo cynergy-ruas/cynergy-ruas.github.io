@@ -8,6 +8,7 @@ import { AboutComponent } from './components/about/about.component';
 import { CountdownComponent } from './components/countdown/countdown.component';
 import { TeamComponent } from './components/team/team.component';
 import { HallOfFameComponent } from './components/hall-of-fame/hall-of-fame.component';
+import { FaqComponent } from './components/faq/faq.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -15,7 +16,8 @@ const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'countdown', component: CountdownComponent },
   { path: 'team', component: TeamComponent },
-  { path: 'hall-of-fame', component: HallOfFameComponent }
+  { path: 'hall-of-fame', component: HallOfFameComponent },
+  { path: 'faq', component: FaqComponent }
 ];
 
 @NgModule({

@@ -5,6 +5,7 @@ import { QuotesService } from '../../services/quotes.service';
 
 // Quote Model
 import { Quote } from '../../models/quote';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -13,20 +14,21 @@ import { Quote } from '../../models/quote';
 })
 export class HomeComponent implements OnInit {
 
-  quote: Quote;
+  quote: Quote = new Quote();
 
-  constructor(private quotesService: QuotesService) { }
+  constructor(private quotesService: QuotesService, private router: Router) { }
 
   ngOnInit() {
-    // let quote = this.quotesService.getRandomQuote();
-    // console.log(quote);
+
+    // Get a Random Quote from the Database
     this.quotesService.getRandomQuote()
       .then(data => {
-        console.log(data);
-        this.quote.text = data.text;
-        this.quote.author = data.author;
-        console.log(this.quote);
+        this.quote = new Quote(data.text, data.author);
       });
+  }
+
+  register() {
+    this.router.navigate(['/register']);
   }
 
 }

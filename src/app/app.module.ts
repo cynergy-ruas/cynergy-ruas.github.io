@@ -29,6 +29,11 @@ import { HallOfFameComponent } from './components/hall-of-fame/hall-of-fame.comp
 import { FaqComponent } from './components/faq/faq.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { RegisterComponent } from './components/register/register.component';
+
+// Reactive forms module
+import { ReactiveFormsModule } from '@angular/forms';
+import { AlertComponent } from './components/alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +46,9 @@ import { FooterComponent } from './components/footer/footer.component';
     HallOfFameComponent,
     FaqComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    RegisterComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +58,8 @@ import { FooterComponent } from './components/footer/footer.component';
     AngularFirestoreModule, // import for the database features
     AngularFireAuthModule , // import for the authentication feature
     AppRoutingModule, // Routing Module
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    ReactiveFormsModule // for reactive forms
   ],
   providers: [],
   bootstrap: [AppComponent]

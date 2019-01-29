@@ -8,11 +8,15 @@
           <li>
             <h2 class="h2-responsive">
               <i class="fas fa-quote-left" aria-hidden="true"></i>
-              The people who are crazy enough to think they can change the world are the ones who do.
+              {{quote.text}}
+              <!-- The people who are crazy enough to think they can change the world are the ones who do. -->
               <i class="fas fa-quote-right" aria-hidden="true"></i></h2>
           </li>
           <li class="mb-0">
-            <h5 class="text-center font-italic mb-0">~ Steve Jobs</h5>
+            <h5 class="text-center font-italic mb-0">
+              <!-- ~ Steve Jobs -->
+              ~ {{quote.author}}
+            </h5>
           </li>
         </ul>
 
@@ -260,7 +264,7 @@
         </div>
         <div class="col-md-4">
           <button mdbBtn class="wow animated swing" data-wow-iteration="3" data-wow-delay="0.4s" type="button" color="white" outline="true"
-            mdbWavesEffect>Click here to become a member!</button>
+            mdbWavesEffect (click)="register()">Click here to become a member!</button>
         </div>
       </div>
       <!-- Section heading -->

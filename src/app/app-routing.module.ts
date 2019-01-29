@@ -19,7 +19,7 @@ const appRoutes: Routes = [
   { path: 'team', component: TeamComponent },
   { path: 'hall-of-fame', component: HallOfFameComponent },
   { path: 'faq', component: FaqComponent },
-  { path: 'register', component: RegisterComponent }
+  { path: 'register', component: CountdownComponent }
 ];
 
 @NgModule({

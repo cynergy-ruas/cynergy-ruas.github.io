@@ -187,8 +187,7 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
-firebase
-Apache-2.0
+firebase/app
 
 @firebase/polyfill
 Apache-2.0
@@ -327,6 +326,18 @@ If the Work includes a "NOTICE" text file as part of its distribution, then any 
 
 END OF TERMS AND CONDITIONS
 
+
+@firebase/firestore
+Apache-2.0
+
+@firebase/logger
+Apache-2.0
+
+@firebase/webchannel-wrapper
+Apache-2.0
+
+firebase
+Apache-2.0
 
 @firebase/auth
 Apache-2.0
@@ -537,22 +548,11 @@ Apache-2.0
 @firebase/database
 Apache-2.0
 
-@firebase/logger
-Apache-2.0
-
-@firebase/firestore
-Apache-2.0
-
-@firebase/webchannel-wrapper
-Apache-2.0
-
 @firebase/functions
 Apache-2.0
 
 @firebase/storage
 Apache-2.0
-
-firebase/app
 
 rxjs
 Apache-2.0

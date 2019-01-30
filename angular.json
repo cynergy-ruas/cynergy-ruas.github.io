@@ -28,10 +28,6 @@
             ],
             "styles": [
               "src/styles.scss",
-              "./node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss",
-              "./node_modules/@fortawesome/fontawesome-free/scss/solid.scss",
-              "./node_modules/@fortawesome/fontawesome-free/scss/regular.scss",
-              "./node_modules/@fortawesome/fontawesome-free/scss/brands.scss",
               "./node_modules/angular-bootstrap-md/scss/bootstrap/bootstrap.scss",
               "./node_modules/angular-bootstrap-md/scss/mdb-free.scss"
             ],
@@ -40,9 +36,7 @@
               "./node_modules/chart.js/dist/Chart.js",
               "./node_modules/hammerjs/hammer.min.js",
               "./src/app/native-js/timer.js",
-              "./src/app/native-js/TweenMax.min.js",
-              "./src/app/native-js/jquery.waypoints.min.js",
-              "./src/app/native-js/jquery.stellar.min.js"
+              "./src/app/native-js/TweenMax.min.js"
             ]
           },
           "configurations": {
@@ -55,17 +49,17 @@
               ],
               "optimization": true,
               "outputHashing": "all",
-              "sourceMap": true,
-              "extractCss": true,
+              "sourceMap": false,
+              "extractCss": false,
               "namedChunks": true,
               "aot": true,
-              "extractLicenses": true,
+              "extractLicenses": false,
               "vendorChunk": false,
               "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "3mb",
+                  "maximumWarning": "2mb",
                   "maximumError": "5mb"
                 }
               ]

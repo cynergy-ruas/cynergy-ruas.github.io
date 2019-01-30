@@ -10,6 +10,7 @@ import { TeamComponent } from './components/team/team.component';
 import { HallOfFameComponent } from './components/hall-of-fame/hall-of-fame.component';
 import { FaqComponent } from './components/faq/faq.component';
 import { RegisterComponent } from './components/register/register.component';
+import { GoogleFormComponent } from './components/google-form/google-form.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -19,7 +20,8 @@ const appRoutes: Routes = [
   { path: 'team', component: TeamComponent },
   { path: 'hall-of-fame', component: HallOfFameComponent },
   { path: 'faq', component: FaqComponent },
-  { path: 'register', component: CountdownComponent }
+  { path: 'register', component: CountdownComponent },
+  { path: 'join', component: GoogleFormComponent }
 ];
 
 @NgModule({

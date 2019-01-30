@@ -1,0 +1,27 @@
+What is cynergy:
+Collaborate: "Peers and environment are among the crucial components of growth. Thus, we encourage students to collaborate and group together to create the required habitat for programmers."
+Innovation: "Innovation distinguishes between a leader and a follower. Cynergy encourages students to come up with innovative ideas, and provides support for bringing those ideas into fruition."
+Compete: "No Competition, No Progress. Competing with peers sharpens ones skills, and  provides a feeling of exhilaration like no other. So let loose and conquer the leaderboard!"
+Open: "In accordance with GNU's philosophy, we aim to be open and free. Progress does not occur when one monopolizes knowledge and discoveries. Collaborating with a vast community not only improves one's understanding, it also protects one's privacy and enables transparency, both of which are our priorities."
+
+Events:
+title/header whatever: "The Past. The Present. And The Future."
+
+Past Event:
+title: "Inaugration"
+description: "Its finally here! the inaugration of the first official coding club of Ramaiah University!"
+
+Present Event:
+title: "Orientation"
+description(head): "Time to delve into the belly of the beast. Be there, if you have what it takes. There will be no second chance."
+description(body): "Get to know how Cynergy will operate. Register yourself for this adventurous voyage. Look out for exciting goodies that may come your way!"
+
+
+Contact:
+description: "Have any queries? feel free to contact our team"
+
+{Note: 	"Innovation distinguishes between leader and follower"
+			- Steve jobs
+		"No Competition, No Progress"
+			- Bela Karolyi
+}

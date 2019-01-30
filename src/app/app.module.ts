@@ -34,6 +34,7 @@ import { RegisterComponent } from './components/register/register.component';
 // Reactive forms module
 import { ReactiveFormsModule } from '@angular/forms';
 import { AlertComponent } from './components/alert/alert.component';
+import { GoogleFormComponent } from './components/google-form/google-form.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { AlertComponent } from './components/alert/alert.component';
     NavbarComponent,
     FooterComponent,
     RegisterComponent,
-    AlertComponent
+    AlertComponent,
+    GoogleFormComponent
   ],
   imports: [
     BrowserModule,

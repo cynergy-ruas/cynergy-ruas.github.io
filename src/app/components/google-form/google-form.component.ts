@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+
+import { Router } from '@angular/router';
+import { DOCUMENT } from '@angular/common';
+
 
 @Component({
   selector: 'app-google-form',
@@ -7,9 +11,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GoogleFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, @Inject(DOCUMENT) private document: any) { }
 
   ngOnInit() {
+    // this.router.navigate(['/join314159265']);
+
+    this.document.location.href = 'https://goo.gl/forms/sKRxoNUuK5TLDS163';
   }
 
 }

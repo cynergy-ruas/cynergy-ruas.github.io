@@ -21,7 +21,7 @@ const appRoutes: Routes = [
   { path: 'hall-of-fame', component: HallOfFameComponent },
   { path: 'faq', component: FaqComponent },
   { path: 'register', component: CountdownComponent },
-  { path: 'join', component: GoogleFormComponent }
+  { path: 'join314159265', component: GoogleFormComponent }
 ];
 
 @NgModule({

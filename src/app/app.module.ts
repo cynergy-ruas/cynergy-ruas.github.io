@@ -35,6 +35,14 @@ import { RegisterComponent } from './components/register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AlertComponent } from './components/alert/alert.component';
 import { GoogleFormComponent } from './components/google-form/google-form.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
+
+// Authentication Service
+import { AuthService } from './shared/services/auth.service';
 
 @NgModule({
   declarations: [
@@ -50,7 +58,12 @@ import { GoogleFormComponent } from './components/google-form/google-form.compon
     FooterComponent,
     RegisterComponent,
     AlertComponent,
-    GoogleFormComponent
+    GoogleFormComponent,
+    DashboardComponent,
+    SignInComponent,
+    SignUpComponent,
+    ForgotPasswordComponent,
+    VerifyEmailComponent
   ],
   imports: [
     BrowserModule,
@@ -63,7 +76,9 @@ import { GoogleFormComponent } from './components/google-form/google-form.compon
     MDBBootstrapModule.forRoot(),
     ReactiveFormsModule // for reactive forms
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

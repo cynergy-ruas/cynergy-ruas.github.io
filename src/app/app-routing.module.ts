@@ -11,6 +11,13 @@ import { HallOfFameComponent } from './components/hall-of-fame/hall-of-fame.comp
 import { FaqComponent } from './components/faq/faq.component';
 import { RegisterComponent } from './components/register/register.component';
 import { GoogleFormComponent } from './components/google-form/google-form.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
+import { SecureInnerPagesGuard } from './shared/guard/secure-inner-pages.guard';
+import { AuthGuard } from './shared/guard/auth.guard';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -21,7 +28,12 @@ const appRoutes: Routes = [
   { path: 'hall-of-fame', component: HallOfFameComponent },
   { path: 'faq', component: FaqComponent },
   { path: 'register', component: CountdownComponent },
-  { path: 'join314159265', component: GoogleFormComponent }
+  { path: 'join314159265', component: GoogleFormComponent }, // isko hatana hoga
+  { path: 'sign-in', component: SignInComponent, canActivate: [SecureInnerPagesGuard] },
+  { path: 'register-user', component: SignUpComponent, canActivate: [SecureInnerPagesGuard] },
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
+  { path: 'forgot-password', component: ForgotPasswordComponent, canActivate: [SecureInnerPagesGuard] },
+  { path: 'verify-email-address', component: VerifyEmailComponent, canActivate: [SecureInnerPagesGuard] }
 ];
 
 @NgModule({

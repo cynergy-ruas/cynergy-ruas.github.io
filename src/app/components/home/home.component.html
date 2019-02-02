@@ -1,3 +1,5 @@
+<!-- <link rel="stylesheet" href="http://getbootstrap.com.vn/examples/equal-height-columns/equal-height-columns.css" /> -->
+
 <!-- Main Intro -->
 <!-- <div class="view intro-2">
   <div class="full-bg-img">
@@ -221,12 +223,12 @@
       <p class="grey-text pb-5 text-center">The Past. The Present. And The Future.</p>
 
       <!--Grid row-->
-      <div class="row">
+      <div class="row row-flex">
 
         <!--Grid column-->
-        <div class="col-md-12 mb-4" *ngIf="upcomingEvent as event">
-          <div class="card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/img%20%2832%29.jpg);">
-            <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 rounded">
+        <div class="col-md-4" *ngIf="upcomingEvent as event">
+          <div class="card card-image content" [ngStyle]="{'background-image': event.bg}">
+            <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 rounded mask upcoming-gradient">
               <div>
                 <h6 class="purple-text">
                   <i class="fas fa-code fa-2x mx-2"></i>
@@ -254,9 +256,12 @@
           <!--Grid column-->
 
           <!-- <div class="col-md-6 mb-4"> -->
-          <div *ngFor="let event of pastEvents" class="col-md-6 col-md-4 col-sm-6 col-12">
-            <div class="card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Nature/6-col/img%20%2873%29.jpg);">
-              <div class="text-white text-center align-items-center rgba-black-strong py-5 px-4 rounded">
+          <div *ngFor="let event of pastEvents" class="col-md-4">
+
+            <div class="card card-image content" 
+            [ngStyle]="{'background-image': event.bg}"
+            >
+              <div class="text-white text-center align-items-center rgba-black-strong py-5 px-4 rounded mask img-gradient">
                 <div>
                   <h6 class="pink-text">
                     <i class="fas fa-chalkboard-teacher fa-2x mx-2"></i>
@@ -277,6 +282,7 @@
               </div>
             </div>
           </div>
+
           <!--Grid column-->
         <!-- </div> -->
 

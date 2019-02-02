@@ -62,19 +62,22 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.eventsService.getNextUpcomingEvent()
       .then(data => {
         this.upcomingEvent = data;
+        this.upcomingEvent.bg = 'url(https://source.unsplash.com/random/400x601)';
       });
   }
 
   getPastTwoEvents(): void {
     this.eventsService.getPastTwoEvents()
       .then(data => {
+        const toPush = data;
         this.pastEvents.push(data[0]);
         this.pastEvents.push(data[1]);
+        this.pastEvents[0].bg = 'url(https://source.unsplash.com/random/400x602)';
+        this.pastEvents[1].bg = 'url(https://source.unsplash.com/random/400x603)';
       });
   }
 
   toDateString(date) {
     return date.toLocaleString('en-in', {day: 'numeric', month: 'long', year: 'numeric'});
   }
-
 }

@@ -73,4 +73,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
       });
   }
 
+  toDateString(date) {
+    return date.toLocaleString('en-in', {day: 'numeric', month: 'long', year: 'numeric'});
+  }
+
 }

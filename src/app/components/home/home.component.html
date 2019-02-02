@@ -238,6 +238,9 @@
                 <p class="pb-3">
                   {{event.details.description}}
                 </p>
+                <p class="pb-3">
+                    Date : {{toDateString(event.date.toDate())}}
+                  </p>
                 <!-- <a mdbBtn color="secondary" size="md" rounded="true" class="waves-light" mdbWavesEffect>
                   <i class="far fa-clone left"></i> View Event Details</a> -->
               </div>
@@ -247,12 +250,13 @@
         <!--Grid column-->
 
 
-        <div class="row" *ngFor="let event of pastEvents">
+        <!-- <div class="" *ngFor="let event of pastEvents"> -->
           <!--Grid column-->
 
-          <div class="col-md-6 mb-4">
+          <!-- <div class="col-md-6 mb-4"> -->
+          <div *ngFor="let event of pastEvents" class="col-md-6 col-md-4 col-sm-6 col-12">
             <div class="card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Nature/6-col/img%20%2873%29.jpg);">
-              <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 rounded">
+              <div class="text-white text-center align-items-center rgba-black-strong py-5 px-4 rounded">
                 <div>
                   <h6 class="pink-text">
                     <i class="fas fa-chalkboard-teacher fa-2x mx-2"></i>
@@ -264,6 +268,9 @@
                   <p class="pb-3">
                     {{event.details.description}}
                   </p>
+                  <p class="pb-3">
+                    Date : {{toDateString(event.date.toDate())}}
+                  </p>
                   <!-- <a mdbBtn color="pink" size="md" rounded="true" class="waves-light" mdbWavesEffect>
                   <i class="far fa-clone left"></i>View Session Details</a> -->
                 </div>
@@ -271,7 +278,7 @@
             </div>
           </div>
           <!--Grid column-->
-        </div>
+        <!-- </div> -->
 
       </div>
       <!--Grid row-->

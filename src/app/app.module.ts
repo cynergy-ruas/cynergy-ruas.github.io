@@ -39,12 +39,21 @@ import { VerifyEmailComponent } from './components/verify-email/verify-email.com
 import { LoginComponent } from './components/login/login.component';
 
 // Reactive forms module
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AlertComponent } from './components/alert/alert.component';
 
 
+// Material Design
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatNativeDateModule } from '@angular/material';
+import { HttpClientModule } from '@angular/common/http';
+import { DemoMaterialModule } from './material-module';
+
 // Authentication Service
 import { AuthService } from './shared/services/auth.service';
+
+// QRCode Generator
+import { QRCodeModule } from 'angularx-qrcode';
 
 @NgModule({
   declarations: [
@@ -77,7 +86,14 @@ import { AuthService } from './shared/services/auth.service';
     AngularFireAuthModule , // import for the authentication feature
     AppRoutingModule, // Routing Module
     MDBBootstrapModule.forRoot(),
-    ReactiveFormsModule // for reactive forms
+    ReactiveFormsModule, // for reactive forms,
+    BrowserAnimationsModule,
+    FormsModule,
+    DemoMaterialModule,
+    HttpClientModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
+    QRCodeModule // QR Code
   ],
   providers: [
     AuthService

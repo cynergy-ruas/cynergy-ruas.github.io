@@ -1,18 +1,31 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import {TweenMax, Power1 , Expo} from 'gsap';
-import { FormGroup } from '@angular/forms';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { TweenMax, Power1 , Expo } from 'gsap';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { AuthService } from 'src/app/shared/services/auth.service';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, AfterViewInit {
 
   loginForm: FormGroup;
 
-  constructor(private elRef: ElementRef) { }
+  constructor(
+    private elRef: ElementRef,
+    public authService: AuthService,
+    private formBuilder: FormBuilder
+    ) {
+      this.loginForm = this.formBuilder.group({
+        email: ['', Validators.required],
+        password: ['', Validators.required]
+      });
+    }
 
-  update() { }
+  onSubmit() {
+    // console.log(this.loginForm.value);
+  }
 
   ngOnInit() {
     var email = this.elRef.nativeElement.querySelector('#email'), password = document.querySelector('#password'), mySVG = this.elRef.nativeElement.querySelector('.svgContainer'), armL = document.querySelector('.armL'), armR = document.querySelector('.armR'), eyeL = document.querySelector('.eyeL'), eyeR = document.querySelector('.eyeR'), nose = document.querySelector('.nose'), mouth = document.querySelector('.mouth'), mouthBG = document.querySelector('.mouthBG'), mouthSmallBG = document.querySelector('.mouthSmallBG'), mouthMediumBG = document.querySelector('.mouthMediumBG'), mouthLargeBG = document.querySelector('.mouthLargeBG'), mouthMaskPath = document.querySelector('#mouthMaskPath'), mouthOutline = document.querySelector('.mouthOutline'), tooth = document.querySelector('.tooth'), tongue = document.querySelector('.tongue'), chin = document.querySelector('.chin'), face = document.querySelector('.face'), eyebrow = document.querySelector('.eyebrow'), outerEarL = document.querySelector('.earL .outerEar'), outerEarR = document.querySelector('.earR .outerEar'), earHairL = document.querySelector('.earL .earHair'), earHairR = document.querySelector('.earR .earHair'), hair = document.querySelector('.hair');

@@ -28,13 +28,13 @@ const appRoutes: Routes = [
   { path: 'team', component: TeamComponent },
   { path: 'hall-of-fame', component: HallOfFameComponent },
   { path: 'faq', component: FaqComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent, canActivate: [SecureInnerPagesGuard] },
+  { path: 'login', component: LoginComponent, canActivate: [SecureInnerPagesGuard] },
   { path: 'join314159265', component: GoogleFormComponent }, // isko hatana hoga
   { path: 'sign-in', component: SignInComponent, canActivate: [SecureInnerPagesGuard] },
   { path: 'register-user', component: SignUpComponent, canActivate: [SecureInnerPagesGuard] },
   // { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
-  { path: 'dashboard', component: DashboardComponent },
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'forgot-password', component: ForgotPasswordComponent, canActivate: [SecureInnerPagesGuard] },
   { path: 'verify-email-address', component: VerifyEmailComponent, canActivate: [SecureInnerPagesGuard] }
 ];

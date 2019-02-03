@@ -2,7 +2,7 @@ import { Injectable, NgZone } from '@angular/core';
 import { User } from '../services/user';
 import { auth } from 'firebase/app';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreDocument, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
 
 @Injectable({
@@ -110,7 +110,7 @@ export class AuthService {
   }
 
   setUserData(user) {
-    const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.uid}`);
+    const userRef: AngularFirestoreDocument<any> = this.afs.doc(`Users/${user.email}`);
     const userData: User = {
       uid: user.uid,
       email: user.email,
@@ -122,11 +122,31 @@ export class AuthService {
     });
   }
 
+  saveRegistrationInfo(user) {
+    const userRef: AngularFirestoreDocument<any> = this.afs.doc(`Users/${user.email}`);
+    return userRef.set( Object.assign({}, user), {
+      merge: true
+    });
+  }
+
+  getCurrentUser(email) {
+    const userRef: AngularFirestoreCollection = this.afs.collection(`Users`);
+    const query = userRef.ref.where('email', '==', email).limit(1);
+
+    const result =  query.get()
+    .then(querySnapshot => {
+      return querySnapshot.docs.map(documentSnapshot => documentSnapshot.data());
+    })
+    .catch(console.log);
+
+    return result;
+  }
+
   signOut() {
     return this.afAuth.auth.signOut()
       .then(() => {
         localStorage.removeItem('user');
-        this.router.navigate(['sign-in']);
+        this.router.navigate(['login']);
       });
   }
 }

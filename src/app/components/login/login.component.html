@@ -1,7 +1,10 @@
-<main class="mx-5 py-5" >
-  <section class="text-center mt-5 full-bg-img" style="background-color:rgb(3, 14, 29);">
-    <div class="container py-5 px-5" style="height: 100vh">
-      <form class="mt-5" [formGroup]="loginForm" (ngSubmit)="update()">
+<main class="">
+  <section class="text-center full-bg-img wow fadeIn" style="background-color:rgb(3, 14, 29); min-height: 100vh;">
+    <div class="container my-5">
+      <!-- To Display the Alert -->
+      <app-alert></app-alert>
+
+      <form class="mt-5" [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
         <div class="svgContainer">
           <div>
             <svg class="mySVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200">
@@ -110,28 +113,34 @@
           </div>
         </div>
 
-        <div class="inputGroup inputGroup1">
+        <div class="inputGroup inputGroup1 form-group formGroup">
           <label for="email1">Email</label>
-          <input type="text" id="email" class="email" maxlength="256" />
-          <p class="helper helper1">email@domain.com</p>
+          <input type="text" id="email" class="email formControl" formControlName="email"  placeholder="email" maxlength="256" #email required/>
+          <p class="helper helper1"></p>
           <span class="indicator"></span>
         </div>
 
-        <div class="inputGroup inputGroup2">
+        <div class="inputGroup inputGroup2 form-group formGroup">
           <label for="password">Password</label>
-          <input type="password" id="password" class="password" />
+          <input type="password" id="password" class="password formControl" formControlName="password"  placeholder="password" #password required/>
         </div>
 
 
         <div class="inputGroup inputGroup3">
-          <button class="login-button" id="login">Log in</button>
+          <button class="login-button" type="submit" id="login" (click)="authService.signInWithEmailAndPassword(email.value, password.value)" mdbWavesEffect >Log in</button>
         </div>
         <div>
-          <button type="button" mdbBtn class="btn-gplus waves-light" mdbWavesEffect><i class="fab fa-google-plus left"></i>Google +</button>
-        <button type="button" mdbBtn class="btn-git waves-light" mdbWavesEffect><i class="fab fa-github left"></i>Github</button>
+          <button type="button" mdbBtn class="btn-gplus waves-light red" (click)="authService.googleAuth()" mdbWavesEffect>
+            <i class="fab fa-google-plus left"></i>
+            Google+
+          </button>
+          <button type="button" mdbBtn class="btn-git waves-light" color="elegant" (click)="authService.githubAuth()" mdbWavesEffect>
+            <i class="fab fa-github left"></i>
+            Github
+          </button>
 
         </div>
-        
+
       </form>
     </div>
 

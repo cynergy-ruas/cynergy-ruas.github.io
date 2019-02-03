@@ -48,16 +48,15 @@ export class EventsComponent implements OnInit {
   addEvent(): void {
 
     const eventToAdd: Event = this.eventsService.constructEvent(
-      new Date(2019, 1, 4, 17, 0, 0, 0),
-      'CP',
-      'Introduction to CP',
-      `Competitive Programming is a Sport, in which we learn by making mistake, In this event we'll learn about the basic of  \
-      Competitive Programming and introduce you to the realm of CP and beyond.`,
+      new Date(2019, 0, 25, 10, 30, 0, 0),
+      'Inauguration',
+      'Inauguration',
+      `Its finally here! the inaugration of the first official coding club of Ramaiah University!`,
       '',
       ['Seminar Hall'],
       [''],
-      90,
-      'CP'
+      120,
+      'Inauguration'
     );
 
     this.eventsService.addEvent(eventToAdd)

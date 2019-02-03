@@ -54,7 +54,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   register() {
-    // this.router.navigate(['/join314159265']);
+    this.router.navigate(['/register']);
     // this.document.location.href = 'https://goo.gl/forms/sKRxoNUuK5TLDS163';
   }
 

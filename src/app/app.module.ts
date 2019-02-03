@@ -30,16 +30,18 @@ import { FaqComponent } from './components/faq/faq.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RegisterComponent } from './components/register/register.component';
-
-// Reactive forms module
-import { ReactiveFormsModule } from '@angular/forms';
-import { AlertComponent } from './components/alert/alert.component';
 import { GoogleFormComponent } from './components/google-form/google-form.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
+import { LoginComponent } from './components/login/login.component';
+
+// Reactive forms module
+import { ReactiveFormsModule } from '@angular/forms';
+import { AlertComponent } from './components/alert/alert.component';
+
 
 // Authentication Service
 import { AuthService } from './shared/services/auth.service';
@@ -63,7 +65,8 @@ import { AuthService } from './shared/services/auth.service';
     SignInComponent,
     SignUpComponent,
     ForgotPasswordComponent,
-    VerifyEmailComponent
+    VerifyEmailComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

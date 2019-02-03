@@ -17,7 +17,7 @@ form {
 	width: 100%;
 	max-width: 400px;
 	background-color: #fff;
-	margin: 0; 
+	margin: 0;
 	padding: 1.25em;
 	box-sizing: border-box;
 	border: solid 1px #ddd;
@@ -89,10 +89,10 @@ form {
 		}
 	}
 	input[type="email"],
-	input[type="text"]{
+	input[type="text"] {
 		padding: 14px 1em 0px;
 	}
-	button {
+	.login-button {
 		display: block;
 		margin: 0;
 		padding: 0.65em 1em 1em;
@@ -140,4 +140,3 @@ form {
 		}
 	}
 }
-    

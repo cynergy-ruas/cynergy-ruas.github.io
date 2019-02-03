@@ -1,7 +1,7 @@
-<main>
-  <section class="text-center py-5 full-bg-img" style="background-color:rgb(3, 14, 29);">
-    <div class="container" style="height: 100vh;">
-      <form class="mt-5" [formGroup]="registrationForm" (ngSubmit)="update()" >
+<main class="mx-5 py-5" >
+  <section class="text-center mt-5 full-bg-img" style="background-color:rgb(3, 14, 29);">
+    <div class="container py-5 px-5" style="height: 100vh">
+      <form class="mt-5" [formGroup]="loginForm" (ngSubmit)="update()">
         <div class="svgContainer">
           <div>
             <svg class="mySVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200">
@@ -116,12 +116,6 @@
           <p class="helper helper1">email@domain.com</p>
           <span class="indicator"></span>
         </div>
-        <div class="inputGroup inputGroup1">
-          <label for="email1">Username</label>
-          <input type="text" id="username" class="email" maxlength="256" />
-          <p class="helper helper1">cool_short_name</p>          
-          <span class="indicator"></span>
-        </div>
 
         <div class="inputGroup inputGroup2">
           <label for="password">Password</label>
@@ -130,8 +124,14 @@
 
 
         <div class="inputGroup inputGroup3">
-          <button id="login">Register</button>
+          <button class="login-button" id="login">Log in</button>
         </div>
+        <div>
+          <button type="button" mdbBtn class="btn-gplus waves-light" mdbWavesEffect><i class="fab fa-google-plus left"></i>Google +</button>
+        <button type="button" mdbBtn class="btn-git waves-light" mdbWavesEffect><i class="fab fa-github left"></i>Github</button>
+
+        </div>
+        
       </form>
     </div>
 

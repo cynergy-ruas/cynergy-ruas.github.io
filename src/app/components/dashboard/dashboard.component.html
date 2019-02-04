@@ -19,11 +19,18 @@
             Ranking:
             <strong>1450</strong>
           </p>
-          <p class="button red white-text">
+          <p class="grey-text">Your Tracks : </p>
+          <p class="blue-text" *ngIf="user.competitive_track && user.competitive_track == true" >
+            Competitive Track
+          </p>
+          <p class="blue-text" *ngIf="user.development_track && user.development_track == true" >
+            Development Track
+          </p>
+          <!-- <p class="button red white-text">
             <a class="nav-link" (click)="authService.signOut()">
               <i class="fas fa-sign-out-alt"></i>Log out
             </a>
-          </p>
+          </p> -->
           <p class="grey-text">Bio.</p>
 
           <p class="blue-text" *ngIf="user.facebook" >

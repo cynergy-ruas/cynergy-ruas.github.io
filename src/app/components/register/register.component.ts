@@ -30,7 +30,7 @@ export class RegisterComponent implements OnInit {
       this.basicInfo = this.formBuilder.group({
         name: ['', [Validators.required]],
         email: ['', [Validators.required, Validators.email]],
-        username: ['', [Validators.required, Validators.pattern('^[a-z0-9_.-]{8,}$')]],
+        username: ['', [Validators.required, Validators.pattern('^[a-zA-Z0-9_.-]{4,}$')]],
         password: ['', [Validators.required, Validators.minLength(8)]]
       });
 
@@ -39,13 +39,23 @@ export class RegisterComponent implements OnInit {
         year: ['', Validators.required],
         language: ['', Validators.required],
         reg_no: ['', [Validators.required, Validators.minLength(12), Validators.maxLength(12)]],
-        github_username: ['', Validators.required]
+        github_username: ['', Validators.required],
+        competitive_track: [false],
+        development_track: [false]
       });
 
     }
 
   ngOnInit() {
 
+  }
+
+  get f() {
+    return this.basicInfo.controls;
+  }
+
+  get f2() {
+    return this.specificInfo.controls;
   }
 
   register() {
@@ -60,6 +70,9 @@ export class RegisterComponent implements OnInit {
     user.language = this.specificInfo.value.language;
     user.reg_no = this.specificInfo.value.reg_no.toUpperCase();
     user.github_username = this.specificInfo.value.github_username;
+    user.competitive_track = this.specificInfo.value.competitive_track;
+    user.development_track = this.specificInfo.value.development_track;
+    console.log(user);
     this.authService.signUpWithEmailAndPassword(user.email, this.basicInfo.value.password);
     this.authService.saveRegistrationInfo(user)
     .then( () => {

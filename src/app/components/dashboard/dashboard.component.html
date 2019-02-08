@@ -15,9 +15,13 @@
           <p class="text-uppercase blue-text">
             <strong>Ninja</strong>
           </p>
-          <p class="blue-text">
-            Ranking:
+          <!-- <p class="blue-text">
+            Rating:
             <strong>1450</strong>
+          </p> -->
+          <p class="blue-text" style="font-weight: 800">
+            Points:
+            <strong >{{user.attendance_count * 5}}</strong>
           </p>
           <p class="grey-text">Your Tracks : </p>
           <p class="blue-text" *ngIf="user.competitive_track && user.competitive_track == true" >
@@ -71,8 +75,7 @@
             <div class="col-lg-6">
               <blockquote class="blockquote bq-primary">
                 <p class="bq-title">Attendance</p>
-                <p class="text-white">0 out of 4 sessions<br>
-                  0 out of 4 workshops
+                <p class="text-white">{{user.attendance_count}} out of 3 sessions
                 </p>
               </blockquote>
             </div>

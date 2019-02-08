@@ -48,15 +48,16 @@ export class EventsComponent implements OnInit {
   addEvent(): void {
 
     const eventToAdd: Event = this.eventsService.constructEvent(
-      new Date(2019, 0, 25, 10, 30, 0, 0),
-      'Inauguration',
-      'Inauguration',
-      `Its finally here! the inaugration of the first official coding club of Ramaiah University!`,
+      new Date(2019, 1, 7, 17, 0, 0, 0),
+      'Introduction to Linux',
+      'Introduction to Linux',
+      `Cynergy is back with its most awaited workshops on Introduction to FLOSS and Linux CLI 101,
+      Learn what are the benefits of FLOSS, and the buzz around Linux, and why should you know about it`,
       '',
       ['Seminar Hall'],
       [''],
-      120,
-      'Inauguration'
+      90,
+      'Workshop'
     );
 
     this.eventsService.addEvent(eventToAdd)

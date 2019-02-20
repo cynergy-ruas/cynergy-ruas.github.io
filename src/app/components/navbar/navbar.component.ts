@@ -18,7 +18,7 @@ export class NavbarComponent implements OnInit {
       if (user) {
         this.authService.getCurrentUser(user.email)
         .then(myuser => {
-          this.currentUser = myuser[0];
+          this.currentUser = myuser;
           console.log(this.currentUser);
         })
         .catch(err => {

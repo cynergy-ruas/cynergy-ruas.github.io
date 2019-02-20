@@ -41,9 +41,13 @@
       </li> -->
       <!-- Dropdown -->
       <li class="nav-item dropdown" *ngIf="currentUser as user" dropdown>
-        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" style="background-color: #d35400" [routerLink]="['/dashboard']" mdbWavesEffect>
+        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" style="background-color: #d35400"
+          mdbWavesEffect>
           Hello {{user.name}}<span class="caret"></span></a>
         <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#" [routerLink]="['/dashboard']">Dashboard</a>
+          <a *ngIf="user.role == 'coordinator'" class="dropdown-item waves-light" mdbWavesEffect href="#" [routerLink]="['/attendance-scanner']">Attendance
+            Scanner</a>
           <a class="dropdown-item waves-light" mdbWavesEffect href="#" (click)="authService.signOut()">Log out</a>
           <!-- <a class="dropdown-item waves-light" mdbWavesEffect href="#">Another action</a>
           <a class="dropdown-item waves-light" mdbWavesEffect href="#">Something else here</a> -->

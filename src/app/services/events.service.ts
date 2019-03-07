@@ -200,4 +200,16 @@ export class EventsService {
         return err;
       });
   }
+
+  async getEventsAttended(email: string) {
+    const eventsAttended = await this.db.collection('Users').doc(email).collection('events_attended').ref.get();
+    const eventsNamesList = [];
+    await eventsAttended.forEach( async (data) => {
+      const event = await this.db.collection('EventsList').doc(data.ref.id).ref.get();
+      // console.log(event.data().eventName);
+      eventsNamesList.push(event.data());
+    });
+    console.log(eventsNamesList);
+    return eventsNamesList;
+  }
 }

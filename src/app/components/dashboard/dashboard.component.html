@@ -97,7 +97,8 @@
                   </mdb-card-title>
                   <mdb-card-text class="mb-0">Your Recent Activites</mdb-card-text>
                 </mdb-card-body>
-                <ul class="list-group list-group-flush scrollable-list list-color">
+                <ul class="list-group list-group-flush scrollable-list list-color" *ngFor="let event of eventsAttendedList">
+                  <li class="list-group-item">{{event.eventName}}</li>
                   <!-- <li class="list-group-item">Cras justo odio</li>
                   <li class="list-group-item">Dapibus ac facilisis in</li>
                   <li class="list-group-item">Vestibulum at eros</li>

@@ -19,6 +19,7 @@ export class DashboardComponent implements OnInit {
   attendance: any;
   total_events: any;
   leaderboard: any[];
+  eventsAttendedList: any[];
 
   constructor(
     public authService: AuthService,
@@ -40,6 +41,10 @@ export class DashboardComponent implements OnInit {
               console.log(this.eventQR);
             });
           console.log(this.currentUser);
+          this.eventService.getEventsAttended(this.currentUser.email)
+            .then(events => {
+              this.eventsAttendedList = events;
+            });
         })
         .catch(err => {
           console.log(err);
@@ -51,6 +56,7 @@ export class DashboardComponent implements OnInit {
             this.attendance = data.data().attendance_count;
           })
           .catch(console.log);
+
       }
     });
     this.eventService.getNextUpcomingEvent()

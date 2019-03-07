@@ -54,15 +54,14 @@ export class EventsComponent implements OnInit {
   addEvent(): void {
 
     const eventToAdd: Event = this.eventsService.constructEvent(
-      new Date(2019, 1, 21, 18, 0, 0, 0),
-      'Web Development from Scratch',
+      new Date(2019, 2, 7, 19, 0, 0, 0),
+      'Web Development Session 2',
       'Web Development',
-      `CYNERGY is starting its most awaited series "Web Development from Scratch"
-      No prerequisite required. Free and Open Source event`,
-      '',
-      ['Seminar Hall'],
+      `The first step to building your Portfolio`,
+      'None',
       [''],
-      90,
+      [''],
+      120,
       'Workshop'
     );
 

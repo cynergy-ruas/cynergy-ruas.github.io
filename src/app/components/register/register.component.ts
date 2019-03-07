@@ -74,7 +74,7 @@ export class RegisterComponent implements OnInit {
     user.development_track = this.specificInfo.value.development_track;
     console.log(user);
     this.authService.signUpWithEmailAndPassword(user.email, this.basicInfo.value.password)
-      .then(() => {
+      .then((result) => {
         this.authService.saveRegistrationInfo(user)
         .then( () => {
           this.alertService.success('Registered Successfully');

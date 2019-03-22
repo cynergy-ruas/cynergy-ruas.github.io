@@ -89,30 +89,20 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-lg-4 col-md-12 my-2">
+            <div class="col-lg-4 col-md-12 my-2 text-center">
               <mdb-card class="text-white h-100" bgColor="bg-dark">
                 <mdb-card-body>
                   <mdb-card-title>
                     <h5 class="font-weight-bold mb-3">Recent Activities</h5>
                   </mdb-card-title>
-                  <mdb-card-text class="mb-0">Your Recent Activites</mdb-card-text>
+                  <mdb-card-text class="mb-0 pb-0">Your Recent Activites</mdb-card-text>
                 </mdb-card-body>
-                <ul class="list-group list-group-flush scrollable-list list-color" *ngFor="let event of eventsAttendedList">
-                  <li class="list-group-item">{{event.eventName}}</li>
-                  <!-- <li class="list-group-item">Cras justo odio</li>
-                  <li class="list-group-item">Dapibus ac facilisis in</li>
-                  <li class="list-group-item">Vestibulum at eros</li>
-                  <li class="list-group-item">Cras justo odio</li>
-                  <li class="list-group-item">Dapibus ac facilisis in</li>
-                  <li class="list-group-item">Vestibulum at eros</li>
-                  <li class="list-group-item">Cras justo odio</li>
-                  <li class="list-group-item">Dapibus ac facilisis in</li>
-                  <li class="list-group-item">Vestibulum at eros</li>
-                  <li class="list-group-item">Cras justo odio</li>
-                  <li class="list-group-item">Dapibus ac facilisis in</li>
-                  <li class="list-group-item">Vestibulum at eros</li> -->
-                </ul>
-
+                <!-- <ul class="list-group list-group-flush scrollable-list list-color" *ngFor="let event of eventsAttendedList">
+                  <li class="card-link">{{event.eventName}}</li>
+                </ul> -->
+                <div class="flex-row" *ngFor="let event of eventsAttendedList">
+                    <a class="card-link">{{event.eventName}}</a>
+                  </div>
               </mdb-card>
 
             </div>

@@ -12,4 +12,9 @@ export class LeaderboardService {
     const leaderboard = await this.db.collection('Leaderboard').ref.orderBy('points', 'desc').limit(15).get();
     return await leaderboard.docs.map(data => data.data());
   }
+
+  async getLeaderboardAll() {
+    const leaderboard = await this.db.collection('Leaderboard').ref.orderBy('points', 'desc').get();
+    return await leaderboard.docs.map(data => data.data());
+  }
 }

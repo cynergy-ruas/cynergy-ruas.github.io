@@ -20,6 +20,7 @@ import { SecureInnerPagesGuard } from './shared/guard/secure-inner-pages.guard';
 import { AuthGuard } from './shared/guard/auth.guard';
 import { LoginComponent } from './components/login/login.component';
 import { AttendanceScannerComponent } from './components/attendance-scanner/attendance-scanner.component';
+import { LeaderboardComponent } from './components/leaderboard/leaderboard.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -34,11 +35,11 @@ const appRoutes: Routes = [
   { path: 'join314159265', component: GoogleFormComponent }, // isko hatana hoga
   { path: 'sign-in', component: SignInComponent, canActivate: [SecureInnerPagesGuard] },
   { path: 'register-user', component: SignUpComponent, canActivate: [SecureInnerPagesGuard] },
-  // { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'forgot-password', component: ForgotPasswordComponent, canActivate: [SecureInnerPagesGuard] },
   { path: 'verify-email-address', component: VerifyEmailComponent, canActivate: [SecureInnerPagesGuard] },
-  { path: 'attendance-scanner', component: AttendanceScannerComponent, canActivate: [AuthGuard] }
+  { path: 'attendance-scanner', component: AttendanceScannerComponent, canActivate: [AuthGuard] },
+  { path: 'leaderboard', component: LeaderboardComponent }
 ];
 
 @NgModule({

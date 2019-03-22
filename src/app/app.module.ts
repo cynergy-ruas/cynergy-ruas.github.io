@@ -58,6 +58,7 @@ import { QRCodeModule } from 'angularx-qrcode';
 // QRCode Scanner
 import { ZXingScannerModule } from '@zxing/ngx-scanner';
 import { AttendanceScannerComponent } from './components/attendance-scanner/attendance-scanner.component';
+import { LeaderboardComponent } from './components/leaderboard/leaderboard.component';
 
 @NgModule({
   declarations: [
@@ -80,7 +81,8 @@ import { AttendanceScannerComponent } from './components/attendance-scanner/atte
     ForgotPasswordComponent,
     VerifyEmailComponent,
     LoginComponent,
-    AttendanceScannerComponent
+    AttendanceScannerComponent,
+    LeaderboardComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,42 @@
+<main>
+
+  <section id="leaderboard" class="pt-5 wow fadeIn" data-wow-delay="0.1s" style="background-color:rgb(3, 14, 29);">
+
+    <!-- Container -->
+    <div class="container py-5">
+      <!-- Section heading -->
+      <h1 class="h1-responsive font-weight-bold text-center mb-2 title-color ">Leaderboard</h1>
+    </div>
+    <!-- Container -->
+
+  </section>
+  <section id="leaderboard-table" class="py-4 wow fadeIn" data-wow-delay="0.1s" style="background-color:rgb(0, 11, 26);">
+
+    <!--Table-->
+    <table class="table table-striped w-auto m-auto" style="color: aliceblue">
+
+      <!--Table head-->
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Points</th>
+        </tr>
+      </thead>
+      <!--Table head-->
+
+      <!--Table body-->
+      <tbody>
+        <tr *ngFor="let row of leaderboard; index as i" [attr.data-index]="i">
+          <th scope="row">{{i+1}}</th>
+          <td>{{row.name}}</td>
+          <td>{{row.points}}</td>
+        </tr>
+      </tbody>
+      <!--Table body-->
+    </table>
+    <!--Table-->
+
+  </section>
+
+</main>

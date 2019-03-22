@@ -7,14 +7,17 @@
   </mdb-navbar-brand>
   <links>
     <ul class="navbar-nav mr-auto">
-      <a class="nav-item nav-link waves-light" href="" [routerLink]="['/']" routerLinkActive="active" mdbWavesEffect>Home<span
-          class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link waves-light" href="" [routerLink]="['/']" routerLinkActive="active"
+        mdbWavesEffect>Home<span class="sr-only">(current)</span></a>
       <!-- <a class="nav-item nav-link waves-light" href="" [routerLink]="['/join314159265']" routerLinkActive="active" mdbWavesEffect>Join Now !</a> -->
       <a class="nav-item nav-link waves-light" href="" [routerLink]="['/about']" routerLinkActive="active"
         mdbWavesEffect>About</a>
+      <a class="nav-item nav-link waves-light" href="" [routerLink]="['/leaderboard']" routerLinkActive="active"
+        mdbWavesEffect>Leaderboard</a>
       <a class="nav-item nav-link waves-ligh disabled" href="" [routerLink]="['/events']" routerLinkActive="active"
         mdbWavesEffect>Event</a>
-      <a class="nav-item nav-link waves-light" href="" [routerLink]="['/faq']" routerLinkActive="active" mdbWavesEffect>FAQ</a>
+      <a class="nav-item nav-link waves-light" href="" [routerLink]="['/faq']" routerLinkActive="active"
+        mdbWavesEffect>FAQ</a>
       <a class="nav-item nav-link waves-light" href="" [routerLink]="['/team']" routerLinkActive="active">Team</a>
       <a class="nav-item nav-link waves-light" href="" [routerLink]="['/hall-of-fame']" routerLinkActive="active">Hall
         of Fame</a>
@@ -41,12 +44,13 @@
       </li> -->
       <!-- Dropdown -->
       <li class="nav-item dropdown" *ngIf="currentUser as user" dropdown>
-        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" style="background-color: #d35400"
-          mdbWavesEffect>
+        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light"
+          style="background-color: #d35400" mdbWavesEffect>
           Hello {{user.name}}<span class="caret"></span></a>
         <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
           <a class="dropdown-item waves-light" mdbWavesEffect href="#" [routerLink]="['/dashboard']">Dashboard</a>
-          <a *ngIf="user.role == 'coordinator'" class="dropdown-item waves-light" mdbWavesEffect href="#" [routerLink]="['/attendance-scanner']">Attendance
+          <a *ngIf="user.role == 'coordinator'" class="dropdown-item waves-light" mdbWavesEffect href="#"
+            [routerLink]="['/attendance-scanner']">Attendance
             Scanner</a>
           <a class="dropdown-item waves-light" mdbWavesEffect href="#" (click)="authService.signOut()">Log out</a>
           <!-- <a class="dropdown-item waves-light" mdbWavesEffect href="#">Another action</a>
